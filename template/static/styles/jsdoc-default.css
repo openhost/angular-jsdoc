@@ -1,203 +1,192 @@
-html
-{
-    overflow: auto;
-    background-color: #fff;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
+html,
+body {
+  background-color: #fff;
+  color: #000;
+  font-family: 'Open Sans';
+  font-weight: 300;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
-body
-{
-    font: 14px "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    line-height: 130%;
-    color: #000;
-    background-color: #fff;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 10px;
-}
-
-a {
-    color: #444;
-}
-
-a:visited {
-    color: #444;
-}
-
-a:active {
-    color: #444;
-}
-
-header
-{
-    display: block;
-    padding: 6px 4px;
-}
-
-.class-description {
-    font-style: italic;
-    font-family: Palatino, 'Palatino Linotype', serif;
-    font-size: 130%;
-    line-height: 140%;
-    margin-bottom: 1em;
-    margin-top: 1em;
-}
-
-section
-{
-    display: block;
-    background-color: #fff;
-    margin: 12px 24px;
-    border-bottom: 1px solid #ccc;
-}
-
-.variation {
-    display: none;
-}
-
-.signature-attributes {
-    font-size: 60%;
-    color: #aaa;
-    font-style: italic;
-    font-weight: lighter;
-}
-
-nav
-{
-    display: block;
-    top: 28px;
-    bottom: 28px;
-    border-left: 1px solid #ccc;
-    overflow-y: auto;
-    position: fixed;
-    right: 0px;
-    padding: 10px;
-}
-
-nav ul {
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', arial, sans-serif;
-    font-size: 100%;
-    line-height: 17px;
-    padding:0;
-    margin:0;
-    list-style-type:none;
-}
-
-nav h2 a, nav h2 a:visited {
-    color: #A35A00;
-    text-decoration: none;
-}
-
-nav h3 {
-    margin-top: 12px;
-}
-
-nav li {
-    margin-top: 6px;
-}
-
-nav a {
-    color: #5C5954;
-}
-
-nav a:visited {
-    color: #5C5954;
-}
-
-nav a:active {
-    color: #5C5954;
+a,
+a:hover {
+  text-decoration: none;
 }
 
 footer {
-    display: block;
-    padding: 6px;
-    margin-top: 12px;
-    font-style: italic;
-    font-size: 90%;
+  bottom: 0;
+  font-size: 90%;
+  font-style: italic;
+  height: 50px;
+  padding: 15px 10px 0 0;
+  position: absolute;
+  width: 100%;
 }
 
-h1
-{
-    font-size: 200%;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin: 6px 0 9px 0;
+h1 {
+  margin: 0;
+  padding: 15px;
 }
 
-h2
-{
-    font-size: 170%;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin: 6px 0 3px 0;
+header {
+  display: block;
+  padding: 6px 4px;
 }
 
-h3
-{
-    font-size: 150%;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin-top: 16px;
-    margin: 6px 0 3px 0;
+main {
+  padding: 0 210px 40px;
 }
 
-h4
-{
-    font-size: 130%;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin-top: 16px;
-    margin: 18px 0 3px 0;
-    color: #A35A00;
+section {
+  display: block;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+.class-description {
+  font-style: italic;
+  font-size: 130%;
+  line-height: 140%;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.variation {
+  display: none;
+}
+
+.signature-attributes {
+  font-size: 60%;
+  color: #aaa;
+  font-style: italic;
+  font-weight: lighter;
+}
+
+.nav {
+  background: #1b1e24;
+  display: block;
+  color: #fff;
+  top: 0;
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+  padding: 10px;
+  width: 210px;
+  z-index: 10;
+}
+
+.nav.nav-inverted {
+  background: #fafafa;
+  border-left: 1px solid #ccc;
+  height: 100%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 210px;
+}
+
+.nav a {
+  color: #8b91a0;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.nav-inverted a:hover {
+  color: #555;
+}
+
+.nav h1 {
+  font-size: 28px;
+  margin: 0 0 15px 0;
+  padding: 0;
+}
+
+.nav h2 {
+  font-size: 20px;
+  margin: 30px 0 0;
+  text-transform: capitalize;
+}
+
+.nav h2:first-child {
+  margin-top: 0;
+}
+
+.nav-inverted h2 {
+  color: #555;
+}
+
+.nav ul {
+  line-height: 17px;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 15px;
+}
+
+
+.nav li {
+  margin-top: 6px;
 }
 
 h5, .container-overview .subsection-title
 {
-    font-size: 120%;
-    font-weight: bold;
-    letter-spacing: -0.01em;
-    margin: 8px 0 3px -16px;
+  font-size: 120%;
+  font-weight: bold;
+  letter-spacing: -0.01em;
+  margin: 8px 0 3px 0;
 }
 
 h6
 {
-    font-size: 100%;
-    letter-spacing: -0.01em;
-    margin: 6px 0 3px 0;
-    font-style: italic;
+  font-size: 100%;
+  letter-spacing: -0.01em;
+  margin: 6px 0 3px 0;
+  font-style: italic;
 }
 
 .ancestors { color: #999; }
 .ancestors a
 {
-    color: #999 !important;
-    text-decoration: none;
+  color: #999 !important;
+  text-decoration: none;
 }
 
 .important
 {
-    font-weight: bold;
-    color: #950B02;
+  font-weight: bold;
+  color: #950B02;
 }
 
 .yes-def {
-    text-indent: -1000px;
+  text-indent: -1000px;
 }
 
 .type-signature {
-    color: #aaa;
+  color: #aaa;
 }
 
 a.name-link {
-    text-decoration: none;
+  text-decoration: none;
+}
+
+.name {
+  margin-top: 30px;
 }
 
 .name, .signature {
-    font-family: Consolas, "Lucida Console", Monaco, monospace;
+  font-family: Consolas, "Lucida Console", Monaco, monospace;
+}
+
+dl {
+  padding-left: 15px;
 }
 
 .details { margin-top: 14px; border-left: 2px solid #DDD; }
@@ -210,40 +199,37 @@ a.name-link {
 .details .object-value { padding-top: 0; }
 
 .description {
-    margin-bottom: 1em;
-    margin-left: -16px;
-    margin-top: 1em;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .code-caption
 {
-    font-style: italic;
-    font-family: Palatino, 'Palatino Linotype', serif;
-    font-size: 107%;
-    margin: 0;
+  font-style: italic;
+  font-family: Palatino, 'Palatino Linotype', serif;
+  font-size: 107%;
+  margin: 0;
 }
 
-.prettyprint
-{
-    border: 1px solid #ddd;
-    width: 80%;
-    overflow: auto;
+.prettyprint {
+  border: 1px solid #ddd;
+  overflow: auto;
 }
 
 .prettyprint.source {
-    width: inherit;
+  width: inherit;
 }
 
 .prettyprint code
 {
-    font-family: Consolas, 'Lucida Console', Monaco, monospace;
-    font-size: 100%;
-    line-height: 18px;
-    display: block;
-    padding: 4px 12px;
-    margin: 0;
-    background-color: #fff;
-    color: #000;
+  font-family: Consolas, 'Lucida Console', Monaco, monospace;
+  font-size: 100%;
+  line-height: 18px;
+  display: block;
+  padding: 4px 12px;
+  margin: 0;
+  background-color: #fff;
+  color: #000;
 }
 
 .prettyprint code span.line
@@ -286,37 +272,37 @@ a.name-link {
 
 .params, .props
 {
-    border-spacing: 0;
-    border: 0;
-    border-collapse: collapse;
+  border-spacing: 0;
+  border: 0;
+  border-collapse: collapse;
 }
 
 .params .name, .props .name, .name code {
-    color: #A35A00;
-    font-family: Consolas, 'Lucida Console', Monaco, monospace;
-    font-size: 100%;
+  color: #A35A00;
+  font-family: Consolas, 'Lucida Console', Monaco, monospace;
+  font-size: 100%;
 }
 
 .params td, .params th, .props td, .props th
 {
-    border: 1px solid #ddd;
-    margin: 0px;
-    text-align: left;
-    vertical-align: top;
-    padding: 4px 6px;
-    display: table-cell;
+  border: 1px solid #ddd;
+  margin: 0px;
+  text-align: left;
+  vertical-align: top;
+  padding: 4px 6px;
+  display: table-cell;
 }
 
 .params thead tr, .props thead tr
 {
-    background-color: #ddd;
-    font-weight: bold;
+  background-color: #ddd;
+  font-weight: bold;
 }
 
 .params .params thead tr, .props .props thead tr
 {
-    background-color: #fff;
-    font-weight: bold;
+  background-color: #fff;
+  font-weight: bold;
 }
 
 .params th, .props th { border-right: 1px solid #aaa; }
@@ -324,20 +310,24 @@ a.name-link {
 
 .params td.description > p:first-child
 {
-    margin-top: 0;
-    padding-top: 0;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .params td.description > p:last-child
 {
-    margin-bottom: 0;
-    padding-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .disabled {
-    color: #454545;
+  color: #454545;
 }
 
 .section-readme {
-    padding-top: 10px;
+  padding-top: 10px;
 }
+
+.nano .nano-content { padding: 10px; }
+.nano .nano-slider { background: #111; }
+.nano > .nano-content:focus { outline: none; }
