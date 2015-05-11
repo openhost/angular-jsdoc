@@ -289,13 +289,13 @@ function attachModuleSymbols(doclets, modules) {
  * @return {string} The HTML for the navigation sidebar.
  */
 function buildNav(members) {
-    var nav = '<h2><a href="index.html">Index</a></h2>',
+    var nav = '<h1><a href="index.html">Index</a></h1>',
         seen = {},
         hasClassList = false,
         globalNav = '';
 
     if (members.modules.length) {
-        nav += '<h3>Modules</h3><ul>';
+        nav += '<h2>Modules</h2><ul>';
         members.modules.forEach(function(m) {
             if ( !hasOwnProp.call(seen, m.longname) ) {
                 nav += '<li>' + linkto(m.longname, m.name) + '</li>';
@@ -307,7 +307,7 @@ function buildNav(members) {
     }
 
     if (members.externals.length) {
-        nav += '<h3>Externals</h3><ul>';
+        nav += '<h2>Externals</h2><ul>';
         members.externals.forEach(function(e) {
             if ( !hasOwnProp.call(seen, e.longname) ) {
                 nav += '<li>' + linkto( e.longname, e.name.replace(/(^"|"$)/g, '') ) + '</li>';
@@ -337,7 +337,7 @@ function buildNav(members) {
             });
 
             if (classNav !== '') {
-                nav += '<h3>' + groupName + '</h3><ul>';
+                nav += '<h2>' + groupName + '</h2><ul>';
                 nav += classNav;
                 nav += '</ul>';
             }
@@ -345,7 +345,7 @@ function buildNav(members) {
     } // if
 
     if (members.events.length) {
-        nav += '<h3>Events</h3><ul>';
+        nav += '<h2>Events</h2><ul>';
         members.events.forEach(function(e) {
             if ( !hasOwnProp.call(seen, e.longname) ) {
                 nav += '<li>' + linkto(e.longname, e.name) + '</li>';
@@ -357,7 +357,7 @@ function buildNav(members) {
     }
 
     if (members.namespaces.length) {
-        nav += '<h3>Namespaces</h3><ul>';
+        nav += '<h2>Namespaces</h2><ul>';
         members.namespaces.forEach(function(n) {
             if ( !hasOwnProp.call(seen, n.longname) ) {
                 nav += '<li>' + linkto(n.longname, n.longname) + '</li>';
@@ -369,7 +369,7 @@ function buildNav(members) {
     }
 
     if (members.mixins.length) {
-        nav += '<h3>Mixins</h3><ul>';
+        nav += '<h2>Mixins</h2><ul>';
         members.mixins.forEach(function(m) {
             if ( !hasOwnProp.call(seen, m.longname) ) {
                 nav += '<li>' + linkto(m.longname, m.name) + '</li>';
@@ -381,7 +381,7 @@ function buildNav(members) {
     }
 
     if (members.tutorials.length) {
-        nav += '<h3>Tutorials</h3><ul>';
+        nav += '<h2>Tutorials</h2><ul>';
         members.tutorials.forEach(function(t) {
             nav += '<li>' + tutoriallink(t.name) + '</li>';
         });
@@ -399,10 +399,10 @@ function buildNav(members) {
 
         if (!globalNav) {
             // turn the heading into a link so you can actually get to the global page
-            nav += '<h3>' + linkto('global', 'Global') + '</h3>';
+            nav += '<h2>' + linkto('global', 'Global') + '</h2>';
         }
         else {
-            nav += '<h3>Global</h3><ul>' + globalNav + '</ul>';
+            nav += '<h2>Global</h2><ul>' + globalNav + '</ul>';
         }
     }
 
@@ -447,23 +447,23 @@ exports.publish = function(taffyData, opts, tutorials) {
     var sourceFiles = {};
     var sourceFilePaths = [];
     data().each(function(doclet) {
-        
+
         doclet.attribs = '';
 
         switch(doclet.ngdoc) {
-          case "provider": 
+          case "provider":
             doclet.kind = "class";
             break;
-          case "service": 
+          case "service":
             doclet.kind = "class";
             break;
-          case "type": 
+          case "type":
             doclet.kind = "typedef";
             break;
-          case "property": 
+          case "property":
             doclet.kind = "member";
             break;
-          case "event": 
+          case "event":
             doclet.kind = "function";
             break;
         }
