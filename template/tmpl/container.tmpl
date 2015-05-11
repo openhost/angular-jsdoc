@@ -11,18 +11,21 @@
 
 <section>
 
-<header>
-    <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
-        <span class="ancestors"><?js= doc.ancestors.join('') ?></span>
-    <?js } ?>
-    <?js= doc.name ?>
-    <?js if (doc.variation) { ?>
-        <sup class="variation"><?js= doc.variation ?></sup>
-    <?js } ?></h2>
-    <?js if (doc.classdesc) { ?>
-        <div class="class-description"><?js= doc.classdesc ?></div>
-    <?js } ?>
-</header>
+<?js if (doc.ancestors && doc.ancestors.length && doc.variation && doc.classdesc) { ?>
+    <header>
+        <h2><?js if (doc.ancestors && doc.ancestors.length) { ?>
+            <span class="ancestors"><?js= doc.ancestors.join('') ?></span>
+        <?js } ?>
+        <?js= doc.name ?>
+        <?js if (doc.variation) { ?>
+            <sup class="variation"><?js= doc.variation ?></sup>
+        <?js } ?></h2>
+        <?js if (doc.classdesc) { ?>
+            <div class="class-description"><?js= doc.classdesc ?></div>
+        <?js } ?>
+    </header>
+<?js } ?>
+
 
 <article>
     <div class="container-overview">
@@ -161,6 +164,31 @@
         <?js }); ?></dl>
     <?js } ?>
 </article>
+
+<?js if (members.length || methods.length) { ?>
+    <div class="nano nav nav-inverted">
+        <?js if (members.length > 0) { ?>
+            <h2>Members</h2>
+            <ul>
+                <?js members.forEach(function(m) { ?>
+                    <li>
+                        <a href="#.<?js= m.name?>"><?js= m.name ?></a>
+                    </li>
+                <?js }); ?>
+            </ul>
+        <?js } ?>
+        <?js if (methods.length) { ?>
+            <h2>Methods</h2>
+            <ul>
+                <?js methods.forEach(function(m) { ?>
+                    <li>
+                        <a href="#.<?js= m.name?>"><?js= m.name ?></a>
+                    </li>
+                <?js }); ?>
+            </ul>
+        <?js } ?>
+    </div>
+<?js } ?>
 
 </section>
 <?js } ?>
