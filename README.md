@@ -1,23 +1,17 @@
-Angular-JSDoc
+Openhost JSDoc
 =============
 JSDoc 3 Template for AngularJS.  
-A JSDoc plugin and template for AngularJS, nothing else!  
-
-<img src=http://i.imgur.com/FPo9x25.gif width=50%  />
 
 Features
 ----------
-  * Right side TOC, table of contents,  for navigation by Directives, Services, Controllers, etc
-  * Read and process @ngdoc tag
-
-How Does It Look Like
----------------------
-  * [angularjs-google-maps Documentation](https://rawgit.com/allenhwkim/angularjs-google-maps/master/build/docs/index.html)
+  * Left side TOC, table of contents, for navigation by Directives, Services, Controllers, etc.
+  * Right side menu for navigation by component members.
+  * Read and process @ngdoc tag.
 
 Install
 -------
-    $ npm install jsdoc angular-jsdoc --save-dev
-  
+    $ npm install jsdoc openhost-jsdoc --save-dev
+
 Run In Command Line
 -------------------
 Run jsdoc command to generate your documentation. 
@@ -27,11 +21,10 @@ All command line options are the options of [jsdoc](http://usejsdoc.org/about-co
 
 In example,  
 
-    `$ node_modules/jsdoc/jsdoc.js -c node_modules/angular-jsdoc/conf -t node_modules/angular-jsdoc/template -r myDir`
+    $ node_modules/jsdoc/jsdoc.js -c node_modules/openhost-jsdoc/conf -t node_modules/openhost-jsdoc/template -r myDir
 
 Run with gulp-jsdoc
 -------------------
-
 1. install gulp-shell  
     `$ npm install gulp-shell --save-dev`
 
@@ -49,8 +42,3 @@ Run with gulp-jsdoc
    ```
 3. run gulp task  
     `$ gulp docs`
-
-
-[Example of Directive Documentation](https://github.com/allenhwkim/angularjs-google-maps/blob/master/app/scripts/directives/map.js)
-
-[Example of Service Documentation](https://github.com/allenhwkim/angularjs-google-maps/blob/master/app/scripts/services/attr2_options.js)
